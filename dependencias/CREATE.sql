@@ -214,16 +214,18 @@ INSERT INTO perfil (NOME, ID, FOTO, TIPO) VALUES ('Henrique Almeida', 8, 'http:/
 INSERT INTO perfil (NOME, ID, FOTO, TIPO) VALUES ('Isabela Pereira', 9, 'http://example.com/photos/isabela.jpg', 'Usuário');
 INSERT INTO perfil (NOME, ID, FOTO, TIPO) VALUES ('João Rodrigues', 10, 'http://example.com/photos/joao.jpg', 'Administrador');
 
--- Inserções na tabela conteudo
+
+
+
 
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (1, 12, 'Um herói solitário enfrenta desafios épicos para salvar o mundo.', TO_DATE('2024-01-15', 'YYYY-MM-DD'), 'http://example.com/trailers/hero.mp4', 'O Herói');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (2, 16, 'Uma comédia leve sobre as desventuras de um grupo de amigos.', TO_DATE('2024-02-20', 'YYYY-MM-DD'), 'http://example.com/trailers/friends.mp4', 'Amigos Atrapalhados');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (3, 14, 'Um suspense psicológico que explora os limites da mente humana.', TO_DATE('2024-03-10', 'YYYY-MM-DD'), 'http://example.com/trailers/suspense.mp4', 'A Mente');
-INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (4, 18, 'Uma aventura intergaláctica cheia de ação e efeitos visuais impressionantes.', TO_DATE('2024-04-05', 'YYYY-MM-DD'), 'http://example.com/trailers/space.mp4', 'Exploradores Espaciais');
+INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (4, 18, 'Uma aventura intergaláctica cheia de açã impressionantes.', TO_DATE('2024-04-05', 'YYYY-MM-DD'), 'http://example.com/trailers/space.mp4', 'Exploradores');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (5, 10, 'Um drama intenso que aborda questões sociais contemporâneas.', TO_DATE('2024-05-15', 'YYYY-MM-DD'), 'http://example.com/trailers/drama.mp4', 'Sociedade em Crise');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (6, 12, 'Uma animação mágica que encanta crianças e adultos.', TO_DATE('2024-06-20', 'YYYY-MM-DD'), 'http://example.com/trailers/animation.mp4', 'Mundo Encantado');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (7, 14, 'Um thriller cheio de mistérios e reviravoltas inesperadas.', TO_DATE('2024-07-25', 'YYYY-MM-DD'), 'http://example.com/trailers/thriller.mp4', 'Noite de Mistérios');
-INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (8, 16, 'Uma série de comédia romântica que acompanha a vida de um casal improvável.', TO_DATE('2024-08-30', 'YYYY-MM-DD'), 'http://example.com/trailers/romance.mp4', 'Amor Improvável');
+INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (8, 16, 'Uma série de comédia romântica que acompanha a vida de um casal improvável.', TO_DATE('2024-08-30', 'YYYY-MM-DD'), 'http://example.com/trailers/romance.mp4', 'Improvável');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (9, 18, 'Uma obra-prima do terror que vai fazer você pular da cadeira.', TO_DATE('2024-09-15', 'YYYY-MM-DD'), 'http://example.com/trailers/horror.mp4', 'A Noite do Medo');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (10, 20, 'Um documentário fascinante sobre a vida selvagem.', TO_DATE('2024-10-10', 'YYYY-MM-DD'), 'http://example.com/trailers/wildlife.mp4', 'Beleza Selvagem');
 INSERT INTO conteudo (ID, CLASSIFICACAOINDICATIVA, SINOPSE, DATADELANCAMENTO, TRAILER, TITULO) VALUES (11, 12, 'Um épico histórico baseado em eventos reais.', TO_DATE('2024-11-05', 'YYYY-MM-DD'), 'http://example.com/trailers/epic.mp4', 'História em Grande');

@@ -1,14 +1,15 @@
-// Group by/Having
-// lista de nome de artistas que participaram em mais de cinco conteudos
-select a.nome, count(*)
-from artista a join (
-	
-	select p.drt, count(*)
-	from participa p
-	group by p.drt
-	having coutn(*) > 5
-	
-	) on p.drt = a.drt
+-- Group by/Having
+-- lista de nome de artistas que participaram em mais de cinco conteudos
+
+select a.primeiro_nome, count(*)
+from artista a 
+inner join (
+    select p.drt
+    from participa p
+    group by p.drt
+    having count(*) > 5
+) subquery on subquery.drt = a.drt
+group by a.primeiro_nome;
 
 
 
