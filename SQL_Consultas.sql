@@ -61,7 +61,7 @@ WHERE C.DATADELANCAMENTO = (
 -- retorna o titulo dos conteudos de  mesma classificação indicativa e datadelancamento do conteudo de id "26"
 select c.titulo
 from conteudo c
-where (c.CLASSIFICACAOINDICATIVA, c.DataDeLancamento) in (
+where (c.CLASSIFICACAOINDICATIVA, c.DataDeLancamento) = (
     select c.CLASSIFICACAOINDICATIVA, c.DataDeLancamento
     from conteudo c
     where c.id = 26
