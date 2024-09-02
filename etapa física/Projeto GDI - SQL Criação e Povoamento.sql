@@ -294,7 +294,7 @@ INSERT INTO assiste (ID_CONTEUDO, ID_CONTA, NOME) VALUES (5, 1, 'Alice Martins')
 INSERT INTO assiste (ID_CONTEUDO, ID_CONTA, NOME) VALUES (3, 10, 'João Rodrigues');
 INSERT INTO assiste (ID_CONTEUDO, ID_CONTA, NOME) VALUES (4, 10, 'João Rodrigues');
 INSERT INTO assiste (ID_CONTEUDO, ID_CONTA, NOME) VALUES (6, 10, 'João Rodrigues');
-INSERT INTO assiste (ID_CONTEUDO, ID_CONTA, NOME) VALUES (6, 6, 'Fernando Lima');
+INSERT INTO assiste (ID_CONTEUDO, ID_CONTA, NOME) VALUES (1, 6, 'Fernando Lima');
 INSERT INTO assiste (ID_CONTEUDO, ID_CONTA, NOME) VALUES (8, 6, 'Fernando Lima');
 
 
