@@ -115,7 +115,6 @@ ID_CONTEUDO number(10),
 ID_DIRETORES number(10),
 constraint PK_PARTICIPA primary key(DRT, ID_CONTEUDO, ID_DIRETORES),
 constraint FK_DRT foreign key(DRT) references artista(DRT),
---NAO PODE REPETIR NOME PARA CONSTRAINT
 constraint FK_ID_CONTEUDO_PARTICIPA foreign key(ID_CONTEUDO) references conteudo(ID),
 constraint FK_ID_DIRETORES foreign key (ID_DIRETORES) references diretores(ID)
 );
