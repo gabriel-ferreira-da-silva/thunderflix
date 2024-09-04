@@ -1,14 +1,16 @@
 --Group by/Having
 --projetar o nome dos perfis que assistiram mais de 2 conteúdos
-select p.NOME, count(*)
-from perfil p inner join assiste a on p.ID = a.ID_CONTA and p.NOME = a.NOME inner join conteudo c on a.ID_CONTEUDO = c.ID
+select p.NOME
+from perfil p inner join assiste a on p.ID = a.ID_CONTA and p.NOME = a.NOME 
+    inner join conteudo c on a.ID_CONTEUDO = c.ID
 group by p.NOME having count(c.TITULO) > 2;
 
 
 --Junção interna
 --projetar o valor das transações realizadas via débito junto do id da conta que realizou a transação
 select c.ID, p.VALOR
-from pagamento p inner join realiza r on p.ID = r.ID_PAGAMENTO inner join conta c on c.ID = r.ID_CONTA
+from pagamento p inner join realiza r on p.ID = r.ID_PAGAMENTO 
+inner join conta c on c.ID = r.ID_CONTA
 where r.tipo_pgto = 'Débito';
 
 
@@ -38,7 +40,8 @@ where not exists
 	from participa p, artista a
 	where c.ID = p.ID_CONTEUDO and p.DRT = a.DRT);
 
--- Subconsulta escalar: Retorno o titulo do conteúdo que tem a mesma data de lancamento que o de ID 1
+-- Subconsulta escalar: Retorno o titulo do conteúdo que tem a 
+--   mesma data de lancamento que o de ID 1
 SELECT C.TITULO
 FROM CONTEUDO C
 WHERE C.DATADELANCAMENTO = (
@@ -49,7 +52,8 @@ WHERE C.DATADELANCAMENTO = (
 
 
 -- Subconsulta do tipo linha
--- retorna o titulo dos conteudos de  mesma classificação indicativa e datadelancamento do conteudo de id "26"
+-- retorna o titulo dos conteudos de  mesma classificação 
+-- indicativa e datadelancamento do conteudo de id "26"
 select c.titulo
 from conteudo c
 where (c.CLASSIFICACAOINDICATIVA, c.DataDeLancamento) = (
@@ -58,7 +62,8 @@ where (c.CLASSIFICACAOINDICATIVA, c.DataDeLancamento) = (
     where c.id = 26
 );
 
--- Subconsulta do tipo tabela: Projetar os nomes dos proprietários que pagaram no crédito
+-- Subconsulta do tipo tabela: Projetar os nomes dos 
+-- proprietários que pagaram no crédito
 SELECT C.PROPRIETARIO 
 FROM CONTA C
 WHERE C.ID IN (
@@ -69,7 +74,8 @@ WHERE C.ID IN (
 
 
 --Operação de conjunto
---Projeto o nome completo dos artistas e o nome do proprietário das contas
+--Projeto o nome completo dos artistas 
+-- e o nome do proprietário das contas
 SELECT PRIMEIRO_NOME, SOBRENOME
 FROM ARTISTA
 UNION
@@ -89,6 +95,20 @@ BEGIN
     RETURN total;
 END;
 /
+
+
+CREATE OR REPLACE FUNCTION get_payment_by_count(count_id NUMBER)
+RETURN NUMBER
+IS
+    total NUMBER(10, 2);
+BEGIN
+    SELECT SUM(valor) INTO total
+    FROM realiza
+    INNER JOIN pagamento ON realiza.id_conta = pagamento.id
+    WHERE realiza.id_conta = count_id;
+    
+    RETURN total;
+END/
 
 CREATE OR REPLACE PROCEDURE GET_TITULOS_MESMA_DATA AS
     v_data_lancamento CONTEUDO.DATADELANCAMENTO%TYPE;
